@@ -1,0 +1,120 @@
+body {
+    font-family: sans-serif, Helvetica, Arial;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    background-image: url('C:\Users\Arjun Bharadwaj\Desktop\Drapes\img\mainPage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    height: 75px;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+h3 {
+    color: #F9FAF8;
+    font-size: 24px;
+    margin: 0;
+}
+
+h3 a {
+    text-decoration: none;
+    color: #E5E7EB;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 17px;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.navbar ul li {
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #E5E7EB;
+}
+
+.navbar ul li a:active {
+    color: #999999;
+}
+
+.title {
+    padding: 9% 0;
+    color: #FFF;
+    font-size: 75px;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.aboutMe {
+    background-color: #FFF;
+    width: 100%;
+    margin-top: 10%; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    margin: 10px 0; /* Add some spacing between the person entries */
+    width: 80%; /* Adjust width as needed */
+    background-color: #f9f9f9; /* Optional: Add background color to person div */
+    padding: 10px; /* Optional: Add padding to person div */
+    border-radius: 5px; /* Optional: Add border radius to person div */
+}
+
+.person img {
+    margin-right: 20px; /* Space between image and details */
+    width: 150px; /* Ensure consistent image width */
+    height: 150px; /* Ensure consistent image height */
+    border-radius: 50%; /* Optional: Make images circular */
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+#sp {
+    padding: 9% 0;
+    color: #FFF;
+    font-size: 65px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+footer {
+    background-color: #FFF;
+    text-align: center;
+    padding: 5% 0;
+    width: 100%;
+    position: relative;
+}
