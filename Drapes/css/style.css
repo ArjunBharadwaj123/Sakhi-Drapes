@@ -1,80 +1,59 @@
 body {
-    font-family: sans-serif, Helvetica, Arial;
-    display: flex;
-    flex-direction: column;
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
 }
 
 .header {
-    width: 100%;
-    background-image: url('C:\Users\Arjun Bharadwaj\Desktop\Drapes\img\mainPage.jpg');
-    background-repeat: no-repeat;
+    background-image: url('../img/mainPage.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    padding: 0px;
+    position: relative;
+    z-index: 1;
 }
 
 .navbar {
-    height: 75px;
-    padding-left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    flex-wrap: nowrap;
+    padding: 2% 3% 0%;
+
 }
 
-h3 {
-    color: #F9FAF8;
+.navbar h3 a {
+    color: #FFF;
     font-size: 24px;
     margin: 0;
-}
-
-h3 a {
     text-decoration: none;
-    color: #E5E7EB;
 }
 
 .navbar ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 17px;
+    list-style-type: none;
     padding: 0;
-    list-style: none;
-    margin: 0;
-    flex-grow: 1;
-}
-
-.navbar ul li {
-    font-weight: 600;
-    margin-left: 30px;
+    display: flex;
+    gap: 20px;
 }
 
 .navbar ul li a {
+    font-weight: 600;
+    color: white;
     text-decoration: none;
-    color: #E5E7EB;
-}
-
-.navbar ul li a:active {
-    color: #999999;
 }
 
 .title {
-    padding: 9% 0;
-    color: #FFF;
-    font-size: 75px;
     text-align: center;
-}
-
-.main {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    padding: 10% 0%;
+    color: white;
+    font-size: 75px;
 }
 
 .aboutMe {
     background-color: #FFF;
     width: 100%;
-    margin-top: 10%; /* Adjust as needed */
+    margin: 5% 0%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,18 +82,37 @@ h3 a {
     flex-direction: column;
 }
 
-#sp {
-    padding: 9% 0;
-    color: #FFF;
-    font-size: 65px;
-    text-align: center;
-    margin-bottom: 50px;
+.draping-styles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0% 5%;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 5% 0%;
 }
 
+.draping-style {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.draping-style img {
+    width: 60%;
+    height: auto;
+}
+
+.draping-style h3 {
+    margin-top: 10px;
+    margin-bottom: 10%;
+}
+
+
 footer {
-    background-color: #FFF;
     text-align: center;
     padding: 5% 0;
-    width: 100%;
+    background-color: #333;
+    color: white;
     position: relative;
+    z-index: 1;
 }
