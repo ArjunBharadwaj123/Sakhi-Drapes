@@ -24,7 +24,61 @@
             <h1>Contact</h1>
         </div>
     </div>
-    <footer>Company Name</footer>
-    <script type="text/javascript" src="script.js"></script>
+
+    <div class="form-container">
+        <h2>Submit Your Information</h2>
+        <form id="infoForm" onsubmit="handleSubmit(event)">
+            <div class="name-fields">
+                <div class="field-group">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first_name" required>
+                </div>
+                <div class="field-group">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last_name" required>
+                </div>
+            </div>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="event-date">Date of Event:</label>
+            <input type="date" id="event-date" name="event_date" required>
+
+            <label for="people-count">How many People Need Draping:</label>
+            <input type="number" id="people-count" name="people_count" min="1" required>
+
+            <label for="event-time">What Time:</label>
+            <select id="event-time" name="event_time" required></select>
+
+
+            <label for="saree-material">What material is your saree:</label>
+            <input type="text" id="saree-material" name="saree_material" required>
+
+            <label for="draping-style">What draping style would you like:</label>
+            <select id="draping-style" name="draping_style" required>
+                <option value="" disabled selected>Select Draping Style</option>
+                <option value="Dupatta Style">Dupatta Style</option>
+                <option value="Cotton Saree">Cotton Saree</option>
+                <option value="Mermaid Style">Mermaid Style</option>
+                <option value="Bengali Style">Bengali Style</option>
+                <option value="Silk Saree">Silk Saree</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit" id="submitBtn" disabled>Submit</button>
+        </form>
+    </div>
+
+    <div class="confirmation-message" id="confirmationMessage" style="display: none;">
+        <h2>Thank you for your submission!</h2>
+        <p>You will receive an email shortly to confirm your appointment.</p>
+    </div>
+
+    <footer>&copy; 2024 Company Name. All rights reserved.</footer>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -18,9 +19,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
-    padding: 2% 3% 0%;
-
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    padding: 2% 3%;
 }
 
 .navbar h3 a {
@@ -34,6 +34,7 @@ body {
     list-style-type: none;
     padding: 0;
     display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     gap: 20px;
 }
 
@@ -48,6 +49,36 @@ body {
     padding: 10% 0%;
     color: white;
     font-size: 75px;
+}
+
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.portrait {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.description {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    max-width: 600px;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
 }
 
 .aboutMe {
@@ -102,17 +133,174 @@ body {
     height: auto;
 }
 
-.draping-style h3 {
-    margin-top: 10px;
-    margin-bottom: 10%;
+/* Form container styles */
+.form-container {
+    max-width: 800px; /* Adjust maximum width as needed */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%; /* Take up 90% of available width */
+    box-sizing: border-box;
 }
 
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.name-fields {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.field-group {
+    flex: 1;
+    margin-right: 10px; /* Adjust spacing */
+}
+
+.field-group:last-child {
+    margin-right: 0;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="date"],
+.form-container input[type="time"],
+.form-container input[type="number"],
+.form-container select,
+.form-container textarea {
+    width: calc(100% - 20px); /* Adjust width to account for padding and border */
+    padding: 12px; /* Increase padding for better input appearance */
+    margin-bottom: 20px; /* Adjust vertical spacing */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-container input[type="time"] {
+    width: calc(100% - 20px); /* Adjust width to match other inputs */
+}
+
+.form-container textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.form-container button {
+    width: calc(100% - 20px); /* Adjust width to match other inputs */
+    padding: 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #555;
+}
+
+.form-container button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.confirmation-message {
+    text-align: center;
+    margin: 30px;
+    padding: 30px;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    border-radius: 5px;
+    color: #3c763d;
+}
+
+.confirmation-message h2 {
+    margin-top: 0;
+}
 
 footer {
     text-align: center;
-    padding: 5% 0;
+    padding: 10px 0;
     background-color: #333;
-    color: white;
-    position: relative;
-    z-index: 1;
+    color: #fff;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+@media only screen and (max-width: 768px) {
+    /* Example adjustments specific to Home page */
+    .title h1 {
+        font-size: 24px; /* Decrease font size for smaller screens */
+    }
+
+    .about-me .portrait {
+        width: 100%; /* Ensure the portrait image spans the container width */
+        max-width: 300px; /* Limit the maximum width of the image */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .about-me .description {
+        font-size: 14px; /* Decrease font size for smaller screens */
+        line-height: 1.4; /* Adjust line height for readability */
+    }
+
+    .person img {
+        width: 100px; /* Adjust image size for smaller screens */
+        height: 100px; /* Adjust image size for smaller screens */
+    }
+
+    .draping-style {
+        width: 100%; /* Ensure each style takes full width */
+        max-width: 300px; /* Limit maximum width for consistency */
+    }
+
+    .draping-style img {
+        width: 100%; /* Make images fill their parent container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .gallery-item {
+        width: 100%; /* Ensure each gallery item takes full width */
+        max-width: 300px; /* Limit maximum width for consistency */
+    }
+
+    .gallery-item img {
+        width: 100%; /* Make images fill their parent container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .service {
+        width: 100%; /* Ensure each service item takes full width */
+    }
+
+    .service h3 {
+        font-size: 20px; /* Adjust heading font size for smaller screens */
+    }
+
+    .form-container {
+        max-width: 90%; /* Adjusted max-width for smaller screens */
+    }
+
+    .form-container input,
+    .form-container textarea,
+    .form-container select {
+        width: calc(100% - 20px); /* Adjusted input width */
+    }
 }
