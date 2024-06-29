@@ -69,7 +69,8 @@
             </select>
 
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4"></textarea>
+            <textarea id="message" name="message" rows="4" maxlength="200" required></textarea>
+            <span id="message-counter" class="character-counter">200 characters remaining</span>
 
             <button type="submit" id="submitBtn" disabled>Submit</button>
         </form>

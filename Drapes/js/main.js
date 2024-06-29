@@ -6,6 +6,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const eventDateInput = document.getElementById('event-date');
     const eventTimeSelect = document.createElement('select'); // Create select element for time
 
+    const phoneInput = document.getElementById('phone');
+
+    // Function to format phone number
+    function formatPhoneNumber(input) {
+        // Remove non-numeric characters
+        const cleaned = ('' + input).replace(/\D/g, '');
+
+        // Apply formatting: XXX-XXX-XXXX
+        const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+        if (match) {
+            return match[1] + '-' + match[2] + '-' + match[3];
+        }
+        return input; // Return original input if no match
+    }
+
+    // Function to handle input event
+    function handlePhoneInput(event) {
+        const input = event.target.value;
+        const formatted = formatPhoneNumber(input);
+        event.target.value = formatted;
+    }
+
+    // Attach input event listener to phone input
+    phoneInput.addEventListener('input', handlePhoneInput);
+
     // Set Min Date to 1 Week from Today and Max Date to 3 Months from Today
     const today = new Date();
     const minDate = new Date(today);
@@ -45,6 +70,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const currentEventTimeInput = document.getElementById('event-time');
     currentEventTimeInput.parentNode.replaceChild(eventTimeSelect, currentEventTimeInput);
+
+    const messageInput = document.getElementById('message');
+    const messageCounter = document.getElementById('message-counter');
+
+    // Function to handle input event
+    function handleInput(event) {
+        const maxLength = event.target.maxLength;
+        const currentLength = event.target.value.length;
+        const remaining = maxLength - currentLength;
+
+        // Update counter text
+        messageCounter.textContent = `${remaining} characters remaining`;
+
+        // Enable or disable submit button based on message length
+        const submitBtn = document.getElementById('submitBtn');
+        submitBtn.disabled = currentLength === 0;
+    }
+
+    // Attach input event listener to message input
+    messageInput.addEventListener('input', handleInput);
+
+    // Initial setup on page load
+    handleInput({ target: messageInput });
 
     // Enable Submit Button if All Required Fields are Filled
     form.addEventListener('input', validateForm);
