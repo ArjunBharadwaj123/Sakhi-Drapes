@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
             first_name: document.getElementById('first-name').value,
             last_name: document.getElementById('last-name').value,
             email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
             event_date: document.getElementById('event-date').value,
             people_count: document.getElementById('people-count').value,
             event_time: eventTimeSelect.value, // Use select element value
