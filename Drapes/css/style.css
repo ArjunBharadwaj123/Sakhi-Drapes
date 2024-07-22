@@ -1,4 +1,3 @@
-/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -19,7 +18,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    flex-wrap: wrap;
     padding: 2% 3%;
 }
 
@@ -34,7 +33,7 @@ body {
     list-style-type: none;
     padding: 0;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -75,12 +74,6 @@ body {
     max-width: 600px;
 }
 
-.description {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-}
-
 .aboutMe {
     background-color: #FFF;
     width: 100%;
@@ -94,18 +87,18 @@ body {
 .person {
     display: flex;
     align-items: center;
-    margin: 10px 0; /* Add some spacing between the person entries */
-    width: 80%; /* Adjust width as needed */
-    background-color: #f9f9f9; /* Optional: Add background color to person div */
-    padding: 10px; /* Optional: Add padding to person div */
-    border-radius: 5px; /* Optional: Add border radius to person div */
+    margin: 10px 0;
+    width: 80%;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .person img {
-    margin-right: 20px; /* Space between image and details */
-    width: 150px; /* Ensure consistent image width */
-    height: 150px; /* Ensure consistent image height */
-    border-radius: 50%; /* Optional: Make images circular */
+    margin-right: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
 
 .details {
@@ -133,9 +126,35 @@ body {
     height: auto;
 }
 
-/* Form container styles */
+.pricing-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.pricing-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.price-item {
+    margin-bottom: 20px;
+}
+
+.price-item h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.price-item p {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+
 .form-container {
-    max-width: 800px; /* Adjust maximum width as needed */
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -144,7 +163,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%; /* Take up 90% of available width */
+    width: 90%;
     box-sizing: border-box;
 }
 
@@ -156,6 +175,7 @@ body {
 
 .name-fields {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 20px;
@@ -163,7 +183,7 @@ body {
 
 .field-group {
     flex: 1;
-    margin-right: 10px; /* Adjust spacing */
+    margin-right: 10px;
 }
 
 .field-group:last-child {
@@ -185,24 +205,24 @@ body {
 .form-container input[type="number"],
 .form-container select,
 .form-container textarea {
-    width: calc(100% - 20px); /* Adjust width to account for padding and border */
-    padding: 12px; /* Increase padding for better input appearance */
-    margin-bottom: 20px; /* Adjust vertical spacing */
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
 }
 
 .form-container input[type="time"] {
-    width: calc(100% - 20px); /* Adjust width to match other inputs */
+    width: calc(100% - 20px);
 }
 
 .form-container textarea {
-    resize: vertical; /* Allow vertical resizing */
+    resize: vertical;
 }
 
 .form-container button {
-    width: calc(100% - 20px); /* Adjust width to match other inputs */
+    width: calc(100% - 20px);
     padding: 12px;
     background-color: #333;
     color: #fff;
@@ -250,66 +270,67 @@ footer {
     padding: 10px 0;
     background-color: #333;
     color: #fff;
-    margin-top: auto; /* Push footer to the bottom */
+    margin-top: auto;
 }
 
-@media only screen and (max-width: 768px) {
-    /* Example adjustments specific to Home page */
-    .title h1 {
-        font-size: 24px; /* Decrease font size for smaller screens */
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+    .draping-style {
+        width: 45%; /* Adjust for larger screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center;
     }
 
-    .about-me .portrait {
-        width: 100%; /* Ensure the portrait image spans the container width */
-        max-width: 300px; /* Limit the maximum width of the image */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    .about-me .description {
-        font-size: 14px; /* Decrease font size for smaller screens */
-        line-height: 1.4; /* Adjust line height for readability */
-    }
-
-    .person img {
-        width: 100px; /* Adjust image size for smaller screens */
-        height: 100px; /* Adjust image size for smaller screens */
+    .title {
+        font-size: 50px; /* Adjust title font size */
     }
 
     .draping-style {
-        width: 100%; /* Ensure each style takes full width */
-        max-width: 300px; /* Limit maximum width for consistency */
+        width: 100%; /* Adjust for tablets */
     }
 
-    .draping-style img {
-        width: 100%; /* Make images fill their parent container */
-        height: auto; /* Maintain aspect ratio */
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="tel"],
+    .form-container input[type="date"],
+    .form-container input[type="time"],
+    .form-container input[type="number"],
+    .form-container select,
+    .form-container textarea,
+    .form-container button {
+        width: 100%; /* Full width for form elements */
     }
 
-    .gallery-item {
-        width: 100%; /* Ensure each gallery item takes full width */
-        max-width: 300px; /* Limit maximum width for consistency */
+    .field-group {
+        margin-right: 0;
     }
 
-    .gallery-item img {
-        width: 100%; /* Make images fill their parent container */
-        height: auto; /* Maintain aspect ratio */
+    .name-fields {
+        flex-direction: column; /* Stack name fields vertically */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 35px; /* Adjust title font size */
     }
 
-    .service {
-        width: 100%; /* Ensure each service item takes full width */
+    .portrait {
+        width: 100px; /* Adjust portrait size */
+        height: 100px;
     }
 
-    .service h3 {
-        font-size: 20px; /* Adjust heading font size for smaller screens */
+    .draping-style {
+        width: 100%; /* Full width for mobile */
     }
 
     .form-container {
-        max-width: 90%; /* Adjusted max-width for smaller screens */
-    }
-
-    .form-container input,
-    .form-container textarea,
-    .form-container select {
-        width: calc(100% - 20px); /* Adjusted input width */
+        width: 95%; /* Slightly narrower for better fit */
     }
 }
